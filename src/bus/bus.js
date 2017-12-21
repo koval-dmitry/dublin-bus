@@ -14,7 +14,7 @@ class Bus extends Component {
                 </div>
                 <div className="bus-duetime">
                     {this.props.busData.duetime}
-                    {this.props.busData.route != "Due" ? <span>min</span> : null}
+                    {this.props.busData.route !== "Due" ? <span>min</span> : null}
                 </div>
             </div>
         )

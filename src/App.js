@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Redirect,
   Link
 } from 'react-router-dom';
 import MyStops from './my-stops/my-stops';
@@ -33,7 +32,7 @@ class App extends Component {
         <ul className="stops-tabs">
           <li className={this.state.activeTab === "my-stops" ? "active-tab" : null}>
             <Link
-              to="/my-stops"
+              to="/"
                onClick={(e) => this.switchStopTab(e, "my-stops")}
             >
               My stops
@@ -59,9 +58,8 @@ class App extends Component {
 
           {this.renderStopTabs()}
 
-          <Redirect exact from="/" to="/my-stops/" />
-          <Route path="/my-stops" render={(props) => <MyStops {...props} />} />
-          <Route path="/nearby-stops" render={(props) => <NearbyStops {...props} />} />
+          <Route exact path="/" render={(props) => <MyStops {...props} />} />
+          <Route exact path="/nearby-stops" render={(props) => <NearbyStops {...props} />} />
 
           <footer>Made in Rathfarnham with &hearts;</footer>
         </div>

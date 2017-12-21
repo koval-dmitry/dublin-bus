@@ -12,6 +12,10 @@ class MyStops extends Component {
         }
     }
 
+    readLocalStorage() {
+        console.log(localStorage)
+    }
+
     emptyStops() {
         return <p>add some stops</p>
     }
@@ -19,9 +23,12 @@ class MyStops extends Component {
     render() {
         return (
             <div className="results-list">
+                {this.readLocalStorage()}
                 <ul>
                     {this.state.myStops.length ? this.state.myStops.map((stop) => {
-                        return <Stop stopNumber={stop} />;
+                        return <Stop
+                            key={stop}
+                            stopNumber={stop} />;
                     }) : this.emptyStops()}
                 </ul>
                 <button><span>+</span></button>
