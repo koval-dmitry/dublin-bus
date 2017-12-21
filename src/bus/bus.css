@@ -1,0 +1,56 @@
+.stop-panel-label,
+.stop-panel-row > div {
+    margin-right: 15px;
+}
+
+.stop-panel-row > div:last-of-type {
+    margin-right: 0;
+}
+
+.stop-panel {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px 20px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.5);
+}
+
+.stop-panel-label {
+    flex: 2;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.stop-panel-label span {
+    display: block;
+    font-size: 10px;
+}
+
+.stop-panel-results {
+    flex: 10;
+}
+
+.stop-panel-row {
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.bus-route-number {
+    flex: 2;
+    text-align: right;
+}
+
+.bus-destination {
+    flex: 6;
+}
+
+.bus-duetime {
+    flex: 2;
+    text-align: center;
+}
+
+.bus-duetime span {
+    font-size: 8px;
+    text-transform: uppercase;
+}

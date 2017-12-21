@@ -1,0 +1,60 @@
+.stop-tile {
+    padding: 20px;
+    background-color: #610f7f;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stop-tile.final-call {
+    background-color: #ca054d;
+}
+
+.stop-tile > div {
+    margin-right: 15px;
+}
+
+.stop-tile > div:last-of-type {
+    margin-right: 0;
+}
+
+.stop-tile .stop-id {
+    flex: 2;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stop-tile .stop-id span {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.next-bus-route-number {
+    flex: 2;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.next-bus-destination {
+    flex: 6;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.next-bus-duetime {
+    flex: 2;
+    font-size: 20px;
+    text-align: center;
+}
+
+.next-bus-duetime span {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+}

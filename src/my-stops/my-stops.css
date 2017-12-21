@@ -1,0 +1,29 @@
+.results-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.results-list ul {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+button {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    background-color: #ca054d;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.5);
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,42 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #273043;
+  text-transform: uppercase;
+  color: #01aef0;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.stops-tabs {
+  list-style-type: none;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.stops-tabs a {
+  display: block;
+  padding: 14px 20px 10px 20px;
+  text-decoration: none;
+  color: slategrey;
+}
+
+.stops-tabs .active-tab a {
+  color: #ca054d;
+  border-bottom: 4px solid #ca054d;
+}
+
+footer {
+  background-color: rgba(0,0,0,0.2);
+  color: slategrey;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
