@@ -1,3 +1,8 @@
 .results-list ul li {
     margin: 5px;
 }
+
+.no-results {
+    flex: 10;
+    text-align: center;
+}

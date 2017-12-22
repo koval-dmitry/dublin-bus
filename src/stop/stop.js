@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NextBus from "../bus/next-bus";
 import Bus from "../bus/bus";
+import Spinner from "../partials/Spinner";
 import './stop.css';
 
 
@@ -71,7 +72,32 @@ class Stop extends Component {
 
     render() {
         if (this.state.requestFailed) return <p className="loading">Request failed</p>
-        if (!this.state.stopData) return <li className="loading">Loading...</li>
+        if (!this.state.stopData) {
+            return (
+                <li className="loading">
+                    <div className="stop-tile">
+                        <div className="stop-id">
+                            <span>Stop no.</span>
+                            {this.props.stopNumber}
+                        </div>
+                        <Spinner />
+                    </div>
+                </li>
+            )
+        }
+        if (this.state.stopData.errorcode = "1") {
+            return (
+                <li className="loading">
+                    <div className="stop-tile">
+                        <div className="stop-id">
+                            <span>Stop no.</span>
+                            {this.props.stopNumber}
+                        </div>
+                        <div className="no-results">No results</div>
+                    </div>
+                </li>
+            )
+        }
         return (
             <li>
                 <NextBus

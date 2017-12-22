@@ -7,7 +7,8 @@ class NextBus extends Component {
         return (
             <div className="stop-tile" onClick={(e) => this.props.toggleStopPanel(e)}>
                 <div className="stop-id">
-                    {this.props.stopNumber}<span>Stop</span>
+                    <span>Stop no.</span>
+                    {this.props.stopNumber}
                 </div>
                 <div className="next-bus-route-number">
                     {this.props.nextBusData.route}

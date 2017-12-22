@@ -4,6 +4,12 @@
     flex-direction: column;
 }
 
+.notification {
+    text-align: center;
+    padding: 20px;
+    color: #ca054d;
+}
+
 .results-list ul {
     list-style-type: none;
     padding: 10px;
