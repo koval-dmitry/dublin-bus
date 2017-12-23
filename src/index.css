@@ -8,3 +8,11 @@ body {
   background: linear-gradient(to bottom, #42275a, #0b2027);
 
 }
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline:0;
+}

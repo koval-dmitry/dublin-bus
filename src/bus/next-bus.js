@@ -5,7 +5,7 @@ import './next-bus.css';
 class NextBus extends Component {
     render() {
         return (
-            <div className="stop-tile" onClick={(e) => this.props.toggleStopPanel(e)}>
+            <div className="stop-tile" onClick={(e) => this.props.toggleStopPanel()}>
                 <div className="stop-id">
                     <span>Stop no.</span>
                     {this.props.stopNumber}

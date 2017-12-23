@@ -5,7 +5,15 @@ import './nearby-stops.css'
 class NearbyStops extends Component {
     render() {
         return (
-            <p>nearby stops</p>
+            <div className="results-list">
+                <ul>
+                    <li>
+                        <div className="notification">
+                            Coming soon
+                        </div>
+                    </li>
+                </ul>
+            </div>
         )
     }
 }

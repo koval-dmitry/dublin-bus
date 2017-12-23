@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import NextBus from "../bus/next-bus";
 import Bus from "../bus/bus";
-import Spinner from "../partials/Spinner";
+import Spinner from "../partials/spinner";
 import './stop.css';
 
 
 const server = 'https://data.dublinked.ie/';
 const request = 'cgi-bin/rtpi/realtimebusinformation?stopid=';
-const format = '&format=json'
 
 const urlForStopNumber = stopNumber =>
-    server + request + stopNumber + format
+    server + request + stopNumber;
 
 class Stop extends Component {
 
@@ -23,7 +22,7 @@ class Stop extends Component {
         }
     }
 
-    componentDidMount() {
+    fetchDataByStop() {
         fetch(urlForStopNumber(this.props.stopNumber))
             .then(response => {
                 if (!response.ok) {
@@ -44,11 +43,23 @@ class Stop extends Component {
             })
     }
 
+    componentDidMount() {
+        this.fetchDataByStop();
+        this.apiCallInterval = setInterval(
+            () => this.fetchDataByStop(),
+            10000
+        );
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.apiCallInterval);
+    }
+
     renderEmptyResults() {
         return <p className="loading">No buses found</p>
     }
 
-    toggleStopPanel(e) {
+    toggleStopPanel() {
         this.setState({showStopPanel: !this.state.showStopPanel})
     }
 
@@ -85,7 +96,7 @@ class Stop extends Component {
                 </li>
             )
         }
-        if (this.state.stopData.errorcode = "1") {
+        if (this.state.stopData.errorcode === "1") {
             return (
                 <li className="loading">
                     <div className="stop-tile">

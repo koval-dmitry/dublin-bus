@@ -1,16 +1,8 @@
-.results-list {
+.settings {
     flex: 1;
-    display: flex;
-    flex-direction: column;
 }
 
-.notification {
-    text-align: center;
-    padding: 20px;
-    color: #ca054d;
-}
-
-.results-list ul {
+.settings ul {
     list-style-type: none;
     padding: 10px;
     display: flex;
@@ -18,13 +10,18 @@
     color: #fff;
 }
 
-button.add-stop {
-    font-size: 18px;
-    font-weight: 700;
+.settings ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.delete-stop {
+    font-size: 14px;
     color: #fff;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
+    padding: 5px;
+    margin-left: 20px;
     border: none;
     background-color: #ca054d;
     box-shadow: 2px 4px 5px rgba(0,0,0,0.5);

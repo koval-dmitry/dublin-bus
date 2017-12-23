@@ -1,5 +1,6 @@
 .stop-tile {
     padding: 20px;
+    height: 35px;
     background-color: #610f7f;
     box-shadow: 2px 4px 5px rgba(0,0,0,0.5);
     display: flex;

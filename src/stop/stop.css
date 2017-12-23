@@ -4,5 +4,6 @@
 
 .no-results {
     flex: 10;
+    padding: 0 15px;
     text-align: center;
 }
