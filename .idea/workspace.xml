@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01ab58ac-c472-4fee-92c8-e13c5ca31e5d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/partials/header.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/partials/header.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/settings/settings.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/settings/settings.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change beforePath="$PROJECT_DIR$/src/Data.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Data.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/bus/bus.js" afterPath="$PROJECT_DIR$/src/bus/bus.js" />
-      <change beforePath="$PROJECT_DIR$/src/bus/next-bus.css" afterPath="$PROJECT_DIR$/src/bus/next-bus.css" />
-      <change beforePath="$PROJECT_DIR$/src/bus/next-bus.js" afterPath="$PROJECT_DIR$/src/bus/next-bus.js" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
-      <change beforePath="$PROJECT_DIR$/src/my-stops/my-stops.css" afterPath="$PROJECT_DIR$/src/my-stops/my-stops.css" />
       <change beforePath="$PROJECT_DIR$/src/my-stops/my-stops.js" afterPath="$PROJECT_DIR$/src/my-stops/my-stops.js" />
-      <change beforePath="$PROJECT_DIR$/src/nearby-stops/nearby-stops.js" afterPath="$PROJECT_DIR$/src/nearby-stops/nearby-stops.js" />
-      <change beforePath="$PROJECT_DIR$/src/partials/Spinner.css" afterPath="$PROJECT_DIR$/src/partials/Spinner.css" />
-      <change beforePath="$PROJECT_DIR$/src/partials/Spinner.js" afterPath="$PROJECT_DIR$/src/partials/Spinner.js" />
-      <change beforePath="$PROJECT_DIR$/src/stop/stop.css" afterPath="$PROJECT_DIR$/src/stop/stop.css" />
+      <change beforePath="$PROJECT_DIR$/src/settings/settings.css" afterPath="$PROJECT_DIR$/src/settings/settings.css" />
       <change beforePath="$PROJECT_DIR$/src/stop/stop.js" afterPath="$PROJECT_DIR$/src/stop/stop.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -60,8 +43,8 @@
       <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/settings/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="285">
+              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -84,8 +67,8 @@
       <file leaf-file-name="settings.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/settings/settings.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -94,11 +77,21 @@
       <file leaf-file-name="my-stops.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/my-stops/my-stops.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="399">
+              <caret line="31" column="84" lean-forward="false" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stop.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stop/stop.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-637">
+              <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/src/my-stops/my-stops.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="488">
-              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+              <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -143,15 +136,15 @@
         <option value="$PROJECT_DIR$/src/nearby-stops/nearby-stops.js" />
         <option value="$PROJECT_DIR$/src/partials/header.css" />
         <option value="$PROJECT_DIR$/src/bus/bus.js" />
-        <option value="$PROJECT_DIR$/src/stop/stop.js" />
         <option value="$PROJECT_DIR$/src/stop/stop.css" />
         <option value="$PROJECT_DIR$/src/my-stops/my-stops.css" />
-        <option value="$PROJECT_DIR$/src/my-stops/my-stops.js" />
-        <option value="$PROJECT_DIR$/src/settings/settings.css" />
         <option value="$PROJECT_DIR$/src/partials/header.js" />
         <option value="$PROJECT_DIR$/src/settings/settings.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/settings/settings.css" />
+        <option value="$PROJECT_DIR$/src/stop/stop.js" />
+        <option value="$PROJECT_DIR$/src/my-stops/my-stops.js" />
       </list>
     </option>
   </component>
@@ -274,12 +267,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513811182598</updated>
-      <workItem from="1513811185545" duration="39600000" />
+      <workItem from="1513811185545" duration="40996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39600000" />
+    <option name="totallyTimeSpent" value="40996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="0" />
@@ -443,7 +436,7 @@
         <state relative-caret-position="210">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -501,7 +494,7 @@
         <state relative-caret-position="240">
           <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -525,25 +518,7 @@
     <entry file="file://$PROJECT_DIR$/src/my-stops/my-stops.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stop/stop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="106" column="45" lean-forward="false" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/settings.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -586,18 +561,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/settings/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="285">
+          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/settings.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stop/stop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-637">
+          <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/my-stops/my-stops.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="399">
+          <caret line="31" column="84" lean-forward="false" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
