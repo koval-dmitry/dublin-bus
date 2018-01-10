@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./partials/header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import MyStops from "./my-stops/my-stops";
+import AddStop from "./my-stops/add-stop.js";
 import NearbyStops from "./nearby-stops/nearby-stops";
 import Settings from "./settings/settings";
 import "./App.css";
@@ -13,6 +14,9 @@ class App extends Component {
     this.state = {
       myStops: []
     };
+
+    this.addFavoriteStop = this.addFavoriteStop.bind(this);
+    this.removeStopFromFavorites = this.removeStopFromFavorites.bind(this);
   }
 
   componentDidMount() {
@@ -24,10 +28,7 @@ class App extends Component {
     }
   }
 
-  addFavoriteStop() {
-    // ask stop number
-    const inputStop = prompt("Enter stop number");
-
+  addFavoriteStop(inputStop) {
     if (inputStop !== null) {
       // update state
       let favoriteStops = this.state.myStops;
@@ -73,10 +74,10 @@ class App extends Component {
             exact
             path="/"
             render={() => (
-              <MyStops
-                addFavoriteStop={this.addFavoriteStop.bind(this)}
-                myStops={this.state.myStops}
-              />
+              <div>
+                <MyStops myStops={this.state.myStops} />
+                <AddStop addFavoriteStop={this.addFavoriteStop} />
+              </div>
             )}
           />
           <Route exact path="/nearby-stops" render={() => <NearbyStops />} />
@@ -86,9 +87,7 @@ class App extends Component {
             render={() => (
               <Settings
                 myStops={this.state.myStops}
-                removeStopFromFavorites={this.removeStopFromFavorites.bind(
-                  this
-                )}
+                removeStopFromFavorites={this.removeStopFromFavorites}
               />
             )}
           />

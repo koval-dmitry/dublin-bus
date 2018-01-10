@@ -1,9 +1,9 @@
 .results-list ul li {
-    margin: 5px;
+  margin: 5px;
 }
 
 .no-results {
-    flex: 10;
-    padding: 0 15px;
-    text-align: center;
+  flex: 10;
+  padding: 0 15px;
+  text-align: center;
 }

@@ -23,10 +23,6 @@ class MyStops extends Component {
               })
             : this.emptyStops()}
         </ul>
-        <button className="add-stop" onClick={this.props.addFavoriteStop}>
-          <span>+</span>
-        </button>
-        <input type="number" inputMode="numeric" min="0" pattern="[0-9]*" />
       </div>
     );
   }
