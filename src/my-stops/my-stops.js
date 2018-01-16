@@ -15,15 +15,13 @@ class MyStops extends Component {
 
   render() {
     return (
-      <div className="results-list">
-        <ul>
-          {this.props.myStops.length
-            ? this.props.myStops.map(stop => {
-                return <Stop key={stop} stopNumber={stop} />;
-              })
-            : this.emptyStops()}
-        </ul>
-      </div>
+      <ul>
+        {this.props.myStops.length
+          ? this.props.myStops.map(stop => {
+              return <Stop key={stop.stopId} stopData={stop} />;
+            })
+          : this.emptyStops()}
+      </ul>
     );
   }
 }

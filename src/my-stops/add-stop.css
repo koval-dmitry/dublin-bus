@@ -1,10 +1,8 @@
-button.add-stop {
+button {
   font-size: 18px;
-  font-weight: 700;
+  text-align: center;
   color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
+  border-radius: 20px;
   border: none;
   background-color: #ca054d;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
@@ -12,4 +10,25 @@ button.add-stop {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px auto;
+}
+
+button.add-stop {
+  width: 40px;
+  height: 40px;
+}
+
+.form-group {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: block;
+  color: slategrey;
+}
+
+.form-group input {
+  font-size: 20px;
 }

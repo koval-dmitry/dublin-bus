@@ -17,11 +17,15 @@ class Settings extends Component {
           {this.props.myStops.length
             ? this.props.myStops.map(stop => {
                 return (
-                  <li key={stop}>
-                    <div className="settings-stop-id">Stop no. {stop}</div>
+                  <li key={stop.stopId}>
+                    <div className="settings-stop-id">
+                      Stop no. {stop.stopId} | {stop.stopAlias}
+                    </div>
                     <button
                       className="delete-stop"
-                      onClick={() => this.props.removeStopFromFavorites(stop)}
+                      onClick={() =>
+                        this.props.removeStopFromFavorites(stop.stopId)
+                      }
                     >
                       Remove
                     </button>

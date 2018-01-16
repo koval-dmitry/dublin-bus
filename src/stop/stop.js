@@ -4,7 +4,7 @@ import Bus from "../bus/bus";
 import Spinner from "../partials/spinner";
 import "./stop.css";
 
-const server = "https://data.dublinked.ie/";
+const server = "https://data.smartdublin.ie/";
 const request = "cgi-bin/rtpi/realtimebusinformation?stopid=";
 
 const urlForStopNumber = stopNumber => server + request + stopNumber;
@@ -17,10 +17,11 @@ class Stop extends Component {
       showStopPanel: false,
       requestFailed: false
     };
+    this.toggleStopPanel = this.toggleStopPanel.bind(this);
   }
 
   fetchDataByStop() {
-    fetch(urlForStopNumber(this.props.stopNumber))
+    fetch(urlForStopNumber(this.props.stopData.stopId))
       .then(response => {
         if (!response.ok) {
           throw Error("Network request failed");
@@ -45,6 +46,14 @@ class Stop extends Component {
 
   componentWillUnmount() {
     clearInterval(this.apiCallInterval);
+  }
+
+  returnStopComment() {
+    if (this.props.stopData.stopAlias !== null) {
+      return (
+        <div className="stop-comment">{this.props.stopData.stopAlias}</div>
+      );
+    }
   }
 
   renderEmptyResults() {
@@ -83,10 +92,11 @@ class Stop extends Component {
     if (!this.state.stopData) {
       return (
         <li className="loading">
+          {this.returnStopComment()}
           <div className="stop-tile">
             <div className="stop-id">
               <span>Stop no.</span>
-              {this.props.stopNumber}
+              {this.props.stopData.stopId}
             </div>
             <Spinner />
           </div>
@@ -96,10 +106,11 @@ class Stop extends Component {
     if (this.state.stopData.errorcode === "1") {
       return (
         <li className="loading">
+          {this.returnStopComment()}
           <div className="stop-tile">
             <div className="stop-id">
               <span>Stop no.</span>
-              {this.props.stopNumber}
+              {this.props.stopData.stopId}
             </div>
             <div className="no-results">No results</div>
           </div>
@@ -108,11 +119,12 @@ class Stop extends Component {
     }
     return (
       <li>
+        {this.returnStopComment()}
         <NextBus
-          toggleStopPanel={this.toggleStopPanel.bind(this)}
+          toggleStopPanel={this.toggleStopPanel}
           nextBusData={this.state.nextBusData}
-          stopNumber={this.props.stopNumber}
-        />{" "}
+          stopNumber={this.props.stopData.stopId}
+        />
         {this.renderStopPanel()}
       </li>
     );

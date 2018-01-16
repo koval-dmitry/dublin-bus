@@ -2,6 +2,11 @@
   margin: 5px;
 }
 
+.stop-comment {
+  color: slategrey;
+  margin-bottom: 5px;
+}
+
 .no-results {
   flex: 10;
   padding: 0 15px;

@@ -13,6 +13,7 @@
 .results-list ul {
   list-style-type: none;
   padding: 10px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   color: #fff;

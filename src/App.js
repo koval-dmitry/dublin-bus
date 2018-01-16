@@ -28,39 +28,41 @@ class App extends Component {
     }
   }
 
-  addFavoriteStop(inputStop) {
-    if (inputStop !== null) {
-      // update state
-      let favoriteStops = this.state.myStops;
-      favoriteStops.push(inputStop);
-      this.setState({
-        myStops: favoriteStops
-      });
+  addFavoriteStop(stopId, stopAlias = null) {
+    // update state
+    const favoriteStops = this.state.myStops;
+    const newStop = {
+      stopId: stopId,
+      stopAlias: stopAlias
+    };
+    favoriteStops.push(newStop);
+    this.setState({
+      myStops: favoriteStops
+    });
 
-      // update localStorage
-      if (localStorage.getItem("myStops") === null) {
-        let storedStops = [];
-        storedStops.push(inputStop);
-        localStorage.setItem("myStops", JSON.stringify(storedStops));
-      } else {
-        let storedStops = JSON.parse(localStorage.getItem("myStops"));
-        storedStops.push(inputStop);
-        localStorage.setItem("myStops", JSON.stringify(storedStops));
-      }
+    // update localStorage
+    if (localStorage.getItem("myStops") === null) {
+      let storedStops = [];
+      storedStops.push(newStop);
+      localStorage.setItem("myStops", JSON.stringify(storedStops));
+    } else {
+      let storedStops = JSON.parse(localStorage.getItem("myStops"));
+      storedStops.push(newStop);
+      localStorage.setItem("myStops", JSON.stringify(storedStops));
     }
   }
 
-  removeStopFromFavorites(stopID) {
+  removeStopFromFavorites(stopId) {
     //update state
     const oldFavoriteStops = this.state.myStops;
-    const newFavoriteStops = oldFavoriteStops.filter(a => a !== stopID);
+    const newFavoriteStops = oldFavoriteStops.filter(a => a.stopId !== stopId);
     this.setState({
       myStops: newFavoriteStops
     });
 
     //update localStorage
     const oldStoredStops = JSON.parse(localStorage.getItem("myStops"));
-    const newStoredStops = oldStoredStops.filter(a => a !== stopID);
+    const newStoredStops = oldStoredStops.filter(a => a.stopId !== stopId);
     localStorage.setItem("myStops", JSON.stringify(newStoredStops));
   }
 
@@ -74,7 +76,7 @@ class App extends Component {
             exact
             path="/"
             render={() => (
-              <div>
+              <div className="results-list">
                 <MyStops myStops={this.state.myStops} />
                 <AddStop addFavoriteStop={this.addFavoriteStop} />
               </div>
