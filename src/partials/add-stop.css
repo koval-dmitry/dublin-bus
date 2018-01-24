@@ -1,0 +1,31 @@
+button.round {
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+button.round span {
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.form-group {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: block;
+  color: slategrey;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border: none;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5) inset;
+  color: #fff;
+}

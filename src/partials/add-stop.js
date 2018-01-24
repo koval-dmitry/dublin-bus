@@ -4,7 +4,8 @@ import "./add-stop.css";
 
 const modalStyles = {
   overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.3)"
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
+    position: "absolute"
   },
   content: {
     top: "50%",
@@ -16,7 +17,7 @@ const modalStyles = {
     transform: "translate(-50%, -50%)",
     borderRadius: "0",
     border: "none",
-    backgroundColor: "#273043",
+    backgroundColor: "#0b2027",
     boxShadow: "2px 4px 5px rgba(0, 0, 0, 0.5)"
   }
 };
@@ -74,7 +75,7 @@ class AddStop extends Component {
   render() {
     return (
       <div className="add-stop-container">
-        <button className="add-stop" onClick={this.openModal}>
+        <button className="round" onClick={this.openModal}>
           <span>+</span>
         </button>
 

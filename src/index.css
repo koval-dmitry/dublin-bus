@@ -14,6 +14,18 @@ body {
 
 button {
   cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  background-color: #ca054d;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  padding: 8px;
 }
 
 button:focus {

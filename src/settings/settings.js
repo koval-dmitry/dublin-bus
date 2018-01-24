@@ -22,7 +22,13 @@ class Settings extends Component {
                       Stop no. {stop.stopId} | {stop.stopAlias}
                     </div>
                     <button
-                      className="delete-stop"
+                      onClick={() =>
+                        this.props.removeStopFromFavorites(stop.stopId)
+                      }
+                    >
+                      Edit name
+                    </button>
+                    <button
                       onClick={() =>
                         this.props.removeStopFromFavorites(stop.stopId)
                       }

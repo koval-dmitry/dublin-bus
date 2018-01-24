@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./partials/header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import MyStops from "./my-stops/my-stops";
-import AddStop from "./my-stops/add-stop.js";
+import AddStop from "./partials/add-stop";
 import NearbyStops from "./nearby-stops/nearby-stops";
 import Settings from "./settings/settings";
 import "./App.css";

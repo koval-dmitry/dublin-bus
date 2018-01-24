@@ -16,17 +16,3 @@
   align-items: center;
   margin: 5px;
 }
-
-.delete-stop {
-  font-size: 14px;
-  color: #fff;
-  padding: 5px;
-  margin-left: 20px;
-  border: none;
-  background-color: #ca054d;
-  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
