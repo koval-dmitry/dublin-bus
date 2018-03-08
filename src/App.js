@@ -16,6 +16,7 @@ class App extends Component {
     };
 
     this.addFavoriteStop = this.addFavoriteStop.bind(this);
+    this.editFavoriteStop = this.editFavoriteStop.bind(this);
     this.removeStopFromFavorites = this.removeStopFromFavorites.bind(this);
   }
 
@@ -50,6 +51,22 @@ class App extends Component {
       storedStops.push(newStop);
       localStorage.setItem("myStops", JSON.stringify(storedStops));
     }
+  }
+
+  editFavoriteStop(stopId, stopAlias = null) {
+    //update state
+    const newFavoriteStops = this.state.myStops;
+    newFavoriteStops.forEach((stop) => {
+      if (stop.stopId === stopId) {
+        stop.stopAlias = stopAlias;
+      }
+    });
+    this.setState({
+      myStops: newFavoriteStops
+    });
+
+    //update localStorage
+    localStorage.setItem("myStops", JSON.stringify(newFavoriteStops));
   }
 
   removeStopFromFavorites(stopId) {
@@ -89,6 +106,7 @@ class App extends Component {
             render={() => (
               <Settings
                 myStops={this.state.myStops}
+                editFavoriteStop={this.editFavoriteStop}
                 removeStopFromFavorites={this.removeStopFromFavorites}
               />
             )}
