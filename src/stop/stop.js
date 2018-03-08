@@ -49,7 +49,7 @@ class Stop extends Component {
   }
 
   returnStopComment() {
-    if (this.props.stopData.stopAlias !== null) {
+    if (this.props.stopData.stopAlias.length > 0) {
       return (
         <div className="stop-comment">{this.props.stopData.stopAlias}</div>
       );
@@ -91,7 +91,7 @@ class Stop extends Component {
       return <p className="loading">Request failed</p>;
     if (!this.state.stopData) {
       return (
-        <li className="loading">
+        <li>
           {this.returnStopComment()}
           <div className="stop-tile">
             <div className="stop-id">
@@ -105,7 +105,7 @@ class Stop extends Component {
     }
     if (this.state.stopData.errorcode === "1") {
       return (
-        <li className="loading">
+        <li>
           {this.returnStopComment()}
           <div className="stop-tile">
             <div className="stop-id">

@@ -62,7 +62,7 @@ class AddStop extends Component {
       const stopId = this.state.stopId;
       const stopAlias = this.state.stopAlias.length
         ? this.state.stopAlias
-        : null;
+        : "";
       this.props.addFavoriteStop(stopId, stopAlias);
       this.setState({
         stopId: "",

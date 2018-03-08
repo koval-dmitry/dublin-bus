@@ -29,7 +29,7 @@ class App extends Component {
     }
   }
 
-  addFavoriteStop(stopId, stopAlias = null) {
+  addFavoriteStop(stopId, stopAlias = "") {
     // update state
     const favoriteStops = this.state.myStops;
     const newStop = {
@@ -53,7 +53,7 @@ class App extends Component {
     }
   }
 
-  editFavoriteStop(stopId, stopAlias = null) {
+  editFavoriteStop(stopId, stopAlias = "") {
     //update state
     const newFavoriteStops = this.state.myStops;
     newFavoriteStops.forEach((stop) => {
