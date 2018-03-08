@@ -49,7 +49,7 @@ class Stop extends Component {
   }
 
   returnStopComment() {
-    if (this.props.stopData.stopAlias !== null) {
+    if (this.props.stopData.stopAlias.length) {
       return (
         <div className="stop-comment">{this.props.stopData.stopAlias}</div>
       );
