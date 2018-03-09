@@ -39,13 +39,14 @@ class Settings extends Component {
     Modal.setAppElement("body");
   }
 
-  closeModal() {
+  closeModal = event => {
+    event.preventDefault();
     this.setState({
       stopId: "",
       stopAlias: "",
       modalIsOpen: false
     });
-  }
+  };
 
   handleChange(event) {
     const name = event.target.name;
@@ -59,9 +60,7 @@ class Settings extends Component {
     event.preventDefault();
     if (this.state.stopId) {
       const stopId = this.state.stopId;
-      const stopAlias = this.state.stopAlias.length
-        ? this.state.stopAlias
-        : "";
+      const stopAlias = this.state.stopAlias.length ? this.state.stopAlias : "";
       this.props.editFavoriteStop(stopId, stopAlias);
       this.setState({
         stopId: "",
@@ -96,21 +95,22 @@ class Settings extends Component {
                 return (
                   <li key={stop.stopId}>
                     <div className="settings-stop-id">
-                      Stop no. {stop.stopId} | {stop.stopAlias}
+                      Stop no. {stop.stopId}<br />
+                      {stop.stopAlias.length > 0 ? stop.stopAlias : null}
                     </div>
                     <button
                       onClick={() =>
                         this.openModal(stop.stopId, stop.stopAlias)
                       }
                     >
-                      Edit name
+                      edit
                     </button>
                     <button
                       onClick={() =>
                         this.props.removeStopFromFavorites(stop.stopId)
                       }
                     >
-                      Remove
+                      remove
                     </button>
                   </li>
                 );
@@ -122,7 +122,7 @@ class Settings extends Component {
           onRequestClose={this.closeModal}
           style={modalStyles}
         >
-          <div>Edit stop alias</div>
+          <div>Edit stop information</div>
           <form className="stop-form" onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="stop-alias">Stop alias (optional)</label>
@@ -133,7 +133,7 @@ class Settings extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className="form-group">
+            <div className="form-action-buttons">
               <button>Update</button>
               <button onClick={this.closeModal}>Cancel</button>
             </div>

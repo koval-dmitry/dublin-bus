@@ -16,3 +16,24 @@
   align-items: center;
   margin: 5px;
 }
+
+.settings-stop-id {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.form-action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-action-buttons button {
+  width: 45%;
+}
+
+.settings ul li button {
+  margin-left: 10px;
+}

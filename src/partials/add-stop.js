@@ -44,7 +44,8 @@ class AddStop extends Component {
     this.setState({ modalIsOpen: true });
   }
 
-  closeModal() {
+  closeModal = event => {
+    event.preventDefault();
     this.setState({ modalIsOpen: false });
   }
 
@@ -108,7 +109,7 @@ class AddStop extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className="form-group">
+            <div className="form-action-buttons">
               <button>Add</button>
               <button onClick={this.closeModal}>Cancel</button>
             </div>
