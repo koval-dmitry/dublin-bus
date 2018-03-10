@@ -21,7 +21,7 @@ class Stop extends Component {
   }
 
   fetchDataByStop() {
-    fetch(urlForStopNumber(this.props.stopData.stopId))
+    fetch(urlForStopNumber(this.props.stopId))
       .then(response => {
         if (!response.ok) {
           throw Error("Network request failed");
@@ -49,10 +49,8 @@ class Stop extends Component {
   }
 
   returnStopComment() {
-    if (this.props.stopData.stopAlias.length > 0) {
-      return (
-        <div className="stop-comment">{this.props.stopData.stopAlias}</div>
-      );
+    if (this.props.alias.length > 0) {
+      return <div className="stop-comment">{this.props.alias}</div>;
     }
   }
 
@@ -96,7 +94,7 @@ class Stop extends Component {
           <div className="stop-tile">
             <div className="stop-id">
               <span>Stop no.</span>
-              {this.props.stopData.stopId}
+              {this.props.stopId}
             </div>
             <Spinner />
           </div>
@@ -110,7 +108,7 @@ class Stop extends Component {
           <div className="stop-tile">
             <div className="stop-id">
               <span>Stop no.</span>
-              {this.props.stopData.stopId}
+              {this.props.stopId}
             </div>
             <div className="no-results">No results</div>
           </div>
@@ -123,7 +121,7 @@ class Stop extends Component {
         <NextBus
           toggleStopPanel={this.toggleStopPanel}
           nextBusData={this.state.nextBusData}
-          stopNumber={this.props.stopData.stopId}
+          stopNumber={this.props.stopId}
         />
         {this.renderStopPanel()}
       </li>

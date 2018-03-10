@@ -18,7 +18,13 @@ class MyStops extends Component {
       <ul>
         {this.props.myStops.length
           ? this.props.myStops.map(stop => {
-              return <Stop key={stop.stopId} stopData={stop} />;
+              return (
+                <Stop
+                  key={stop.stopId}
+                  alias={stop.stopAlias}
+                  stopId={stop.stopId}
+                />
+              );
             })
           : this.emptyStops()}
       </ul>
