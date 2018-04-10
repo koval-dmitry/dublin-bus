@@ -4,8 +4,8 @@ import Bus from "../bus/bus";
 import Spinner from "../partials/spinner";
 import "./stop.css";
 
-const server = "https://data.smartdublin.ie/";
-const request = "cgi-bin/rtpi/realtimebusinformation?stopid=";
+const server = "https://data.smartdublin.ie/cgi-bin/rtpi/";
+const request = "realtimebusinformation?stopid=";
 
 const urlForStopNumber = stopNumber => server + request + stopNumber;
 

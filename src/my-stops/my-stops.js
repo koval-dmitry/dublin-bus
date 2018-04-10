@@ -7,7 +7,7 @@ class MyStops extends Component {
     return (
       <li>
         <div className="notification">
-          You need to add some stops to favorites
+          You can add some stops to favorites
         </div>
       </li>
     );

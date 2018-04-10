@@ -16,25 +16,17 @@ class NearbyStops extends Component {
     this.getStopsAroundMe = this.getStopsAroundMe.bind(this);
   }
 
-  getStopsAroundMe(lat, long) {
-    const apiUrl =
-      "https://data.smartdublin.ie/cgi-bin/rtpi/BusStopInformationLL?format=json";
+  getStopsAroundMe(lat, lon) {
+    const apiEndpoint = "https://data.smartdublin.ie/cgi-bin/rtpi/";
     const lat1 = lat + 0.0015;
     const lat2 = lat - 0.0015;
-    const long1 = long - 0.0025;
-    const long2 = long + 0.0025;
-    const stopsAroundMe =
-      apiUrl +
-      "&latitude1=" +
-      lat1.toFixed(6) +
-      "&latitude2=" +
-      lat2.toFixed(6) +
-      "&longitude1=" +
-      long1.toFixed(6) +
-      "&longitude2=" +
-      long2.toFixed(6);
+    const lon1 = lon - 0.0025;
+    const lon2 = lon + 0.0025;
+    const stopsAroundMeRequest =
+      apiEndpoint +
+      `BusStopInformationLL?format=json&latitude1=${lat1.toFixed(6)}&latitude2=${lat2.toFixed(6)}&longitude1=${lon1.toFixed(6)}&longitude2=${lon2.toFixed(6)}`;
 
-    fetch(stopsAroundMe)
+    fetch(stopsAroundMeRequest)
       .then(response => {
         if (!response.ok) {
           throw Error("Network request failed");
